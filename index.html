@@ -661,8 +661,98 @@
     }
     .subsidy-note strong { color: var(--accent2); }
 
+    /* ─── PRICING ────────────────────────────────── */
+    .pricing { background: var(--light-gray); }
+    .pricing-card {
+      max-width: 680px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 40px rgba(0,87,184,0.10);
+      padding: 56px 48px;
+      text-align: center;
+      border: 2px solid var(--border);
+    }
+    .pricing-label {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 18px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+      letter-spacing: 0.05em;
+    }
+    .pricing-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 32px;
+    }
+    .pricing-amount {
+      font-size: 64px;
+      font-weight: 900;
+      color: var(--primary);
+      font-family: 'Inter', sans-serif;
+      line-height: 1;
+    }
+    .pricing-amount span.unit {
+      font-size: 28px;
+      font-weight: 700;
+      vertical-align: super;
+      margin-right: 4px;
+    }
+    .pricing-tax {
+      font-size: 14px;
+      color: var(--mid);
+      margin-top: 8px;
+      margin-bottom: 32px;
+    }
+    .pricing-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 32px 0;
+    }
+    .pricing-note-list {
+      list-style: none;
+      text-align: left;
+      display: inline-block;
+      margin: 0 auto;
+    }
+    .pricing-note-list li {
+      font-size: 14px;
+      color: var(--mid);
+      padding: 6px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .pricing-note-list li::before {
+      content: '✓';
+      color: var(--accent);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .pricing-subsidy-box {
+      margin-top: 32px;
+      background: linear-gradient(135deg, #E8F0FC, #E6FBF6);
+      border-radius: 12px;
+      padding: 20px 24px;
+    }
+    .pricing-subsidy-box p {
+      font-size: 14px;
+      color: var(--mid);
+      line-height: 1.7;
+    }
+    .pricing-subsidy-box strong { color: var(--primary); }
+    @media (max-width: 600px) {
+      .pricing-card { padding: 40px 24px; }
+      .pricing-amount { font-size: 48px; }
+    }
+
     /* ─── FLOW ───────────────────────────────────── */
-    .flow { background: var(--light-gray); }
+    .flow { background: white; }
     .flow-steps {
       display: flex;
       gap: 0;
@@ -897,6 +987,7 @@
     <a href="#features">特徴</a>
     <a href="#curriculum">カリキュラム</a>
     <a href="#subsidy">助成金</a>
+    <a href="#pricing">料金</a>
     <a href="#flow">受講の流れ</a>
     <a href="https://insp.co.jp/" target="_blank">会社情報</a>
     <a href="#contact" class="btn-nav-primary">お問い合わせ</a>
@@ -1361,6 +1452,36 @@
   </div>
 </section>
 
+<!-- ===================== PRICING ===================== -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">PRICING</span>
+      <h2 class="section-title">受講<span class="accent-text">料金</span></h2>
+      <p class="section-desc">明瞭な料金体系で、安心してご利用いただけます。</p>
+    </div>
+    <div class="pricing-card fade-in">
+      <div class="pricing-label">生成AI＆DX即戦力講座</div>
+      <div class="pricing-title">お一人様あたり</div>
+      <div class="pricing-amount">
+        <span class="unit">¥</span>400,000
+      </div>
+      <p class="pricing-tax">税別 / 1名</p>
+      <hr class="pricing-divider" />
+      <ul class="pricing-note-list">
+        <li>全14時間のハンズオン研修が含まれます</li>
+        <li>受講人数・カリキュラムに応じてご相談可能です</li>
+        <li>請求書払い・法人対応可能です</li>
+      </ul>
+      <div class="pricing-subsidy-box">
+        <p>人材開発支援助成金を活用すると、中小企業の場合<strong>経費の最大75%が助成</strong>されます。<br />実質負担額を大幅に抑えることが可能です。</p>
+      </div>
+      <a href="#contact" class="btn-primary" style="display:inline-block;margin-top:32px;">料金・助成金について相談する</a>
+      <p style="font-size:12px;color:var(--mid);margin-top:12px;">無料でご相談いただけます</p>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== FLOW ===================== -->
 <section class="flow" id="flow">
   <div class="container">
@@ -1466,6 +1587,7 @@
         <a href="#features">生成AI＆DX即戦力講座</a>
         <a href="#curriculum">カリキュラム</a>
         <a href="#subsidy">助成金活用</a>
+        <a href="#pricing">受講料金</a>
         <a href="#flow">受講の流れ</a>
       </div>
       <div class="footer-col">
